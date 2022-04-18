@@ -69,5 +69,6 @@ var serviceProvider = app.Services.GetRequiredService<IServiceProvider>().Create
 await IdentityHelper.CreateRoles(serviceProvider.ServiceProvider, IdentityHelper.Instructor, IdentityHelper.Student);
 
 // create default instructor
+await IdentityHelper.CreateDefaultUser(serviceProvider.ServiceProvider, IdentityHelper.Instructor);
 
 app.Run();
